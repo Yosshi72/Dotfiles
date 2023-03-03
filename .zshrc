@@ -1,0 +1,1 @@
+source ~/Dotfiles/alias.zsh
