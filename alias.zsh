@@ -27,3 +27,5 @@ if [[ $(command -v ripgrep) ]]; then
     alias grep='ripgrep'
 fi
 alias vi='nvim'
+alias github='open https://github.com/'
+

@@ -24,4 +24,12 @@ if dein#check_install()
 endif
 syntax enable
 
+nnoremap <C-h> <Left>
+inoremap <C-h> <Left>
+nnoremap <C-j> <Down>
+inoremap <C-j> <Down>
+nnoremap <C-l> <Right>
+inoremap <C-l> <Right>
+nnoremap <C-k> <Up>
+inoremap <C-k> <Up>
 inoremap  <silent> jj <ESC>
