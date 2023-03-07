@@ -28,4 +28,5 @@ if [[ $(command -v ripgrep) ]]; then
 fi
 alias vi='nvim'
 alias github='open https://github.com/'
-
+alias wide='open https://member.wide.ad.jp/wide-confidential/camp/23spring/TimetablePage'
+alias notion='open https://www.notion.so/ICTSC-3aa9ba79fced4f0e84a7215d0d2fa133'

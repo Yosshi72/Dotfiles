@@ -1,10 +1,14 @@
 set number
+set ruler
 set title
+set showmatch
 set autoindent 
 set nobackup
 set noswapfile
 set tabstop=2
 set shiftwidth=2
+set belloff=all
+set wildmenu
 set clipboard=unnamed
 set hls
 if &compatible

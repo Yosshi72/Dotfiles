@@ -9,6 +9,21 @@ repo = 'morhetz/gruvbox'
 hook_add = '''
   let g:gruvbox_contrast_dark = 'hard'
 '''
+[[plugins]]
+repo='MichaelMure/mdr'
+hook_add= '''
+	let g:preview_markdown_vertical = 1
+'''
+
+#rust formatter
+[[plugins]]
+repo='rust-lang/rustfmt'
+
+[[plugins]]
+repo='rust-lang/rust.vim'
+hook-add='''
+	let g:rustfmt_autosave = 1
+'''
 
 #gcコマンドでコメントアウト
 [[plugins]]
