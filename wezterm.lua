@@ -1,11 +1,21 @@
 local wezterm = require 'wezterm';
 local act = wezterm.action
 
+wezterm.on('set_opacity', function(window, pane)
+  local overrides = window:get_config_overrides() or {}
+  if not overrides.window_background_opacity then
+    overrides.window_background_opacity = 0.3
+  else
+    overrides.window_background_opacity = nil
+  end
+  window:set_config_overrides(overrides)
+end)
+
 return {
     use_ime = true,
-    font_size = 11.0,
+    font_size = 12.0,
     color_scheme = "Hybrid (terminal.sexy)",
-    window_background_opacity=0.9,
+    window_background_opacity=1.0,
     hide_tab_bar_if_only_one_tab = true,
     warn_about_missing_glyphs = false,
     initial_cols = 120,
@@ -39,5 +49,11 @@ return {
         key = 'j',
         mods = 'CTRL|SHIFT',
         action = act.ActivatePaneDirection 'Down'
-    }}
-}
+    },{
+			 key = 'o',
+			 mods = 'CTRL',
+			 action = act.EmitEvent 'set_opacity'
+		}
+}}
+
+
