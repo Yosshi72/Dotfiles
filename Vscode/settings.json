@@ -1,0 +1,50 @@
+{
+ //golang formatter
+	"[go]": {
+    "editor.tabSize": 4,
+    "editor.insertSpaces": false,
+    "editor.formatOnSave": false,
+    "editor.formatOnPaste": false,
+    "editor.formatOnType": false
+  },
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 1000,
+  "go.formatTool": "gofmt",
+  "go.formatFlags": [
+    "-w"
+  ],
+  "go.lintTool": "golint",
+  "go.lintOnSave": "package",
+  "go.vetOnSave": "package",
+  "go.testOnSave": false,
+  "go.installDependenciesWhenBuilding": true,
+
+	//Python formatter
+  "[python]": {
+    "editor.defaultFormatter":null,
+    "editor.formatOnSave": true
+  },
+
+	//Rust formatter
+	"[rust]": {
+    "editor.formatOnSave": true
+},
+"rust-analyzer.checkOnSave": true,
+"terminal.integrated.enableMultiLinePasteWarning": false,
+"editor.fontLigatures": false,
+"latex-workshop.intellisense.biblatexJSON.replace": {
+
+
+},
+"terminal.integrated.env.osx": {
+  "FIG_NEW_SESSION": "1"
+},
+"hediet.vscode-drawio.resizeImages": null,
+"remote.SSH.remotePlatform": {
+  "camp-k8s": "linux"
+},
+"extensions.experimental.affinity": {
+  "asvetliakov.vscode-neovim": 1
+},
+}
+ 
