@@ -11,6 +11,16 @@ wezterm.on('set_opacity', function(window, pane)
   window:set_config_overrides(overrides)
 end)
 
+wezterm.on('set_font_size', function(window, pane)
+  local overrides = window:get_config_overrides() or {}
+  if not overrides.font_size then
+    overrides.font_size = 16.0
+  else
+    overrides.font_size = nil
+  end
+  window:set_config_overrides(overrides)
+end)
+
 return {
     use_ime = true,
     font_size = 12.0,
@@ -53,7 +63,11 @@ return {
 			 key = 'o',
 			 mods = 'CTRL',
 			 action = act.EmitEvent 'set_opacity'
-		}
+		},{
+			key = 'M',
+			mods = 'CTRL|SHIFT',
+			action = act.EmitEvent 'set_font_size'
+		} 
 }}
 
 
