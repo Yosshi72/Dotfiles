@@ -32,40 +32,40 @@ return {
     initial_rows = 40,
     adjust_window_size_when_changing_font_size = false,
     keys = {{
-        key = '"',
-        mods = 'CTRL|SHIFT',
-        action = act.SplitVertical {
-            domain = 'CurrentPaneDomain'
-        }
-    }, {
-        key = '%',
-        mods = 'CTRL|SHIFT',
+        key = 'd',
+        mods = 'CMD',
         action = act.SplitHorizontal {
             domain = 'CurrentPaneDomain'
         }
     }, {
+        key = 'd',
+        mods = 'CMD|SHIFT',
+        action = act.SplitVertical {
+            domain = 'CurrentPaneDomain'
+        }
+    }, {
         key = 'h',
-        mods = 'CTRL|SHIFT',
+        mods = 'CMD|SHIFT',
         action = act.ActivatePaneDirection 'Left'
     }, {
         key = 'l',
-        mods = 'CTRL|SHIFT',
+        mods = 'CMD|SHIFT',
         action = act.ActivatePaneDirection 'Right'
     }, {
         key = 'k',
-        mods = 'CTRL|SHIFT',
+        mods = 'CMD|SHIFT',
         action = act.ActivatePaneDirection 'Up'
     }, {
         key = 'j',
-        mods = 'CTRL|SHIFT',
+        mods = 'CMD|SHIFT',
         action = act.ActivatePaneDirection 'Down'
     },{
 			 key = 'o',
-			 mods = 'CTRL',
+			 mods = 'CMD',
 			 action = act.EmitEvent 'set_opacity'
 		},{
 			key = 'M',
-			mods = 'CTRL|SHIFT',
+			mods = 'CMD|SHIFT',
 			action = act.EmitEvent 'set_font_size'
 		} 
 }}

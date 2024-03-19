@@ -23,8 +23,8 @@ fi
 if [[ $(command -v procs) ]]; then
     alias ps='procs'
 fi
-if [[ $(command -v ripgrep) ]]; then
-    alias grep='ripgrep'
+if [[ $(command -v rg) ]]; then
+    alias grep='rg'
 fi
 if [[ $(command -v nvim) ]]; then
 		alias vi='nvim'
