@@ -1,27 +1,30 @@
 # !/bin/bash
 
 # ApplicationのInstall
-if [[ $(open /Applications/Warp.app) ]]; then
+if [[ ! -e $"(/Applications/Warp.app)" ]]; then
 		brew install --cask warp
 fi
-if [[ $(open /Applications/Visual\ Studio\ Code.app) ]]; then
+if [[ ! -e $"(/Applications/Visual\ Studio\ Code.app)" ]]; then
 		brew install --cask visual-studio-code
 fi
-if [[ $(open /Applications/Raycast.app) ]]; then
+if [[ ! -e $"(open /Applications/Raycast.app)" ]]; then
 		brew install --cask raycast
 fi
-if [[ $(open /Applications/Karabiner-Elements.app) ]]; then
+if [[ ! -e $"(open /Applications/Karabiner-Elements.app)" ]]; then
 		brew install --cask karabiner-elements
 fi
-if [[ $(open /Applications/Notion.app) ]]; then
+if [[ ! -e $"(open /Applications/Notion.app)" ]]; then
 		brew install --cask notion
 fi
-if [[ $(open /Applications/MonitorControl.app) ]]; then
+if [[ ! -e $"(open /Applications/MonitorControl.app)" ]]; then
 		brew install --cask monitorcontrol
 fi
 
-brew install nvim
-brew install bat
-brew install exe
-brew install ripgrep
-brew install gh
+CLI_TOOLS=('nvim' 'bat' 'eza' 'rg' 'procs' 'gh' 'termshark')
+for cli in ${CLI_TOOLS[@]}
+do
+	if [ ! -x "$(command -v $cli)" ]; then
+		echo "Install $cli"
+		brew install $cli
+	fi
+done
