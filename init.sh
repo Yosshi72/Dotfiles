@@ -10,6 +10,36 @@ ln -sf $CWD/nvim/init.vim $HOME/.vimrc
 
 #neovim
 echo 'Create the symbolic link for neovim'
+if [ ! -e $HOME/.config ]; then
+	mkdir $HOME/.config
+	echo "Created directory: $HOME/.config"
+fi
+
+if [ ! -e $HOME/.config/nvim ]; then
+	mkdir $HOME/.config/nvim
+	echo "Created directory: $HOME/.config/nvim"
+fi
+
+if [ ! -e $HOME/.config/nvim/init.vim ]; then
+	touch $HOME/.config/nvim/init.vim
+	echo "Created file: $HOME/.config/nvim/init.vim" 
+fi
+
+if [ ! -e $HOME/.config/dein ]; then
+	mkdir $HOME/.config/dein
+	echo "Created directory: $HOME/.config/dein"
+fi
+
+if [ ! -e $HOME/.config/dein/dein.toml ]; then
+	touch $HOME/.config/dein/dein.toml
+	echo "Created file: $HOME/.config/dein/dein.toml" 
+fi
+
+if [ ! -e $HOME/.config/dein/dein_lazy.toml ]; then
+	touch $HOME/.config/dein/dein_lazy.toml
+	echo "Created file: $HOME/.config/dein/dein.toml" 
+fi
+
 ln -sf $CWD/nvim/init.vim $HOME/.config/nvim/init.vim
 ln -sf $CWD/nvim/dein.toml $HOME/.config/dein/dein.toml
 ln -sf $CWD/nvim/dein_lazy.toml $HOME/.config/dein/dein_lazy.toml
@@ -17,10 +47,25 @@ ln -sf $CWD/nvim/dein_lang.toml $HOME/.config/dein/dein_lang.toml
 
 #zsh
 echo 'Create the symbolic link for zsh'
+if [ ! -e $HOME/.zshrc ]; then
+	touch $HOME/.zshrc
+	echo "Created file: $HOME/.zshrc"
+fi
+
 ln -sf $CWD/.zshrc $HOME/.zshrc
 
 #wezterm
 echo 'Create the symbolic link for wezterm'
+if [ ! -e $HOME/.config/wezterm ]; then
+	mkdir $HOME/.config/wezterm
+	echo "Created directory: $HOME/.config/wezterm"
+fi
+
+if [ ! -e $HOME/.config/wezterm/wezterm.lua ]; then
+	touch $HOME/.config/wezterm/wezterm.lua
+	echo "Created file: $HOME/.config/wezterm/wezterm.lua"
+fi
+
 ln -sf $CWD/wezterm.lua $HOME/.config/wezterm/wezterm.lua
 
 #vscode

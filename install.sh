@@ -20,3 +20,8 @@ if [[ $(open /Applications/MonitorControl.app) ]]; then
 		brew install --cask monitorcontrol
 fi
 
+brew install nvim
+brew install bat
+brew install exe
+brew install ripgrep
+brew install gh
