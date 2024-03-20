@@ -9,7 +9,8 @@ set tabstop=2
 set shiftwidth=2
 set belloff=all
 set wildmenu
-set clipboard=unnamed
+set clipboard&
+set clipboard^=unnamedplus
 set hls
 if &compatible
  set nocompatible
@@ -19,6 +20,7 @@ if dein#load_state('~/.cache/dein')
   call dein#begin('~/.cache/dein')
   call dein#load_toml('~/.config/dein/dein.toml', {'lazy': 0})
   call dein#load_toml('~/.config/dein/dein_lazy.toml', {'lazy': 1})
+  call dein#load_toml('~/.config/dein/dein_lang.toml', {'lazy': 1})
   call dein#end()
   call dein#save_state()
 endif

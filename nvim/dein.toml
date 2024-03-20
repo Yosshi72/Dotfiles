@@ -14,6 +14,11 @@ repo='MichaelMure/mdr'
 hook_add= '''
 	let g:preview_markdown_vertical = 1
 '''
+[[plugins]]
+repo = 'nvim-treesitter/nvim-treesitter'
+
+[[plugins]]
+repo = 'scrooloose/nerdtree'
 
 #rust formatter
 [[plugins]]
@@ -42,3 +47,5 @@ hook_add = '''
   nmap ]c <Plug>(GitGutterNextHunk)
   nmap [c <Plug>(GitGutterPrevHunk)
 '''
+
+

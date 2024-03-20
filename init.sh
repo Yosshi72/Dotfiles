@@ -2,10 +2,10 @@
 
 # for Mac User
 CWD=$HOME/Dotfiles
-VSCODE=$HOME/Library/Application\ Support/Code/User
+VSCODE=$HOME/Library/Application Support/Code/User
 
 #vim
-echo 'Create the symbolic link for vim'
+echo 'Create the symbolic link for vim: .vimrc'
 ln -sf $CWD/nvim/init.vim $HOME/.vimrc
 
 #neovim
@@ -47,29 +47,14 @@ ln -sf $CWD/nvim/dein_lang.toml $HOME/.config/dein/dein_lang.toml
 
 #zsh
 echo 'Create the symbolic link for zsh'
-if [ ! -e $HOME/.zshrc ]; then
-	touch $HOME/.zshrc
-	echo "Created file: $HOME/.zshrc"
-fi
-
 ln -sf $CWD/.zshrc $HOME/.zshrc
 
 #wezterm
 echo 'Create the symbolic link for wezterm'
-if [ ! -e $HOME/.config/wezterm ]; then
-	mkdir $HOME/.config/wezterm
-	echo "Created directory: $HOME/.config/wezterm"
-fi
-
-if [ ! -e $HOME/.config/wezterm/wezterm.lua ]; then
-	touch $HOME/.config/wezterm/wezterm.lua
-	echo "Created file: $HOME/.config/wezterm/wezterm.lua"
-fi
-
 ln -sf $CWD/wezterm.lua $HOME/.config/wezterm/wezterm.lua
 
 #vscode
 echo 'Create the symbolic link for vscode settings'
 ln -sf $CWD/Vscode/keybindings.json $VSCODE/keybindings.json
 ln -sf $CWD/Vscode/settings.json $VSCODE/settings.json
-
+ln -sf $CWD/Vscode/snippets/ $VSCODE/snippets

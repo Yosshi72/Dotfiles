@@ -31,6 +31,7 @@ if [[ $(command -v nvim) ]]; then
 fi
 
 alias github='open https://github.com/'
+alias camp='open https://member.wide.ad.jp/wide-confidential/camp/24spring/#timetable'
 alias dice='$HOME/Dotfiles/scripts/dice.zsh'
 
 # atcoder cmd
