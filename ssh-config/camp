@@ -1,0 +1,5 @@
+Host camp-k8s
+	Hostname 203.178.137.219
+	User wide
+	ProxyJump vm
+	ForwardAgent yes

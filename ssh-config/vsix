@@ -1,0 +1,34 @@
+Host sg-hongo
+	Hostname 2001:200:0:1cd6:250:56ff:feaf:fc87
+	User vsix
+	ProxyJump kote
+Host fujisawa
+  HostName ops.fujisawa.vsix.wide.ad.jp
+  User yosshi
+  IdentityFile ~/.ssh/id_rsa
+Host kote
+	Hostname 	ops.kote.vsix.wide.ad.jp # 	2001:200:0:18c0::1123 or 202.0.73.129
+	User yosshi
+	IdentityFile ~/.ssh/id_ecdsa
+Host socks-vsix
+	Hostname ops.kote.vsix.wide.ad.jp
+	User yosshi
+	IdentityFile ~/.ssh/id_ecdsa
+	ForwardAgent yes
+	DynamicForward 10080
+Host vsix-vm
+	Hostname yossy.vsix.wide.ad.jp # 2001:200:e00:c11::819
+	User vsix
+	ProxyJump kote
+	Port 10022
+	UseKeychain yes
+  AddKeysToAgent yes
+	Identityfile ~/.ssh/id_ecdsa
+	ForwardAgent yes
+Host fw-demo
+	Hostname 2001:200:0:1cd6:250:56ff:feaf:b666
+	User vsix
+	ProxyJump kote
+	AddKeysToAgent yes
+	Identityfile ~/.ssh/id_ecdsa
+	ForwardAgent yes

@@ -1,0 +1,155 @@
+Host aironet1
+	Hostname 10.0.0.61
+	User elab
+	KexAlgorithms +diffie-hellman-group1-sha1
+	Ciphers aes128-cbc
+	ProxyJump bakseg
+Host aironet4
+	Hostname 10.0.0.64
+	User elab
+	KexAlgorithms +diffie-hellman-group1-sha1
+	Ciphers aes128-cbc
+	ProxyJump bakseg
+Host apresia2
+	Hostname 10.0.0.223
+	User elab
+	KexAlgorithms +diffie-hellman-group1-sha1
+	Ciphers aes128-cbc
+	ProxyJump bakseg
+Host atelier
+	Hostname 10.0.0.222
+	User elab
+Host auth
+  Hostname auth.hongo.wide.ad.jp
+Host bakseg
+  HostName 203.178.135.65
+Host cisco1
+	HostName 10.0.0.2
+	User elab
+	ProxyJump bakseg
+	RequestTTY yes
+Host cc
+  Hostname 203.178.135.69
+Host elab-gw
+  Hostname elab-gw.ic.i.u-tokyo.ac.jp
+Host desk-vm
+	Hostname 172.16.100.101
+	User yossy
+	ProxyJump vm
+Host ggw
+  Hostname ggw.hongo.wide.ad.jp
+Host git
+  ProxyJump gw-services
+  Hostname 10.0.0.101
+Host goemon
+  Hostname 203.178.135.35
+Host gpu
+  Hostname gpu.hongo.wide.ad.jp
+  Port 10022
+  User elab
+Host gpu2
+  Hostname gpu2.hongo.wide.ad.jp
+  User yoshihiko
+Host gpu1
+  Hostname gpu.hongo.wide.ad.jp
+  Port 10022
+  User yoshihiko
+Host growi
+  ProxyJump portal
+  Hostname 192.168.177.4
+  User elab
+Host gw-server
+  Hostname gw-server.hongo.wide.ad.jp
+Host gw-services
+  Hostname gw-services.hongo.wide.ad.jp
+Host juniper1
+	Hostname 10.0.0.41
+	User elab
+	ProxyJump bakseg
+Host kvmhv10
+  ProxyJump bakseg
+  Hostname kvmhv10
+Host kvmhv11
+  ProxyJump bakseg
+  Hostname 192.168.106.141
+Host l2tp_oroom
+	Hostname 10.0.0.150
+	User root
+	ProxyJump bakseg
+Host log
+  Hostname log.hongo.wide.ad.jp
+Host lupin
+  Hostname lupin.hongo.wide.ad.jp
+Host mail
+  HostName mail.hongo.wide.ad.jp
+Host mail2
+  Hostname mail2.hongo.wide.ad.jp
+Host nec1
+	Hostname 10.0.0.111
+	User elab
+	HostKeyAlgorithms ssh-dss,ssh-rsa
+	Ciphers aes128-cbc
+	KexAlgorithms +diffie-hellman-group-exchange-sha1
+	ProxyJump bakseg
+Host nec2
+	Hostname 10.0.0.112
+	User elab
+	HostKeyAlgorithms ssh-dss,ssh-rsa
+	Ciphers aes128-cbc
+	KexAlgorithms +diffie-hellman-group-exchange-sha1
+	ProxyJump bakseg
+Host ns.hongo
+  Hostname 203.178.135.2
+Host ns.ic
+  Hostname ns.ic.i.u-tokyo.ac.jp
+Host os-controller
+  ProxyJump bakseg
+  Hostname openstack-controller
+  User elab
+	IdentityFile ~/.ssh/id_ecdsa
+Host os-compute01
+  ProxyJump bakseg
+  Hostname openstack-compute01
+  User elab
+Host os-compute02
+  ProxyJump bakseg
+  Hostname openstack-compute02
+  User elab
+Host redmine-server
+  ProxyJump lupin
+  Hostname redmine-server.hongo.wide.ad.jp
+Host secretary
+  Hostname secretary.hongo.wide.ad.jp
+  User elab
+Host storage-hv
+  ProxyJump bakseg
+  Hostname storage-hv
+Host storage
+  Hostname storage.hongo.wide.ad.jp
+Host www
+  Hostname www.hongo.wide.ad.jp
+Host xenhv05
+  Hostname xenhv05
+  ProxyJump bakseg
+Host portal
+  Hostname 203.178.135.50
+  User elab
+Host socks-bakseg
+  Hostname            bakseg-mgmt.hongo.wide.ad.jp
+  User                ito
+  IdentityFile        ~/.ssh/id_rsa.pub
+  Port                22
+  ForwardAgent        yes
+  DynamicForward      10800
+Host vm
+  Hostname ito.hongo.wide.ad.jp
+  User ito
+	UseKeychain yes
+	AddKeysToAgent yes
+	ForwardAgent yes
+Host mggw-hongo
+	Hostname 	2001:200:0:1cd6::1
+	User vsix
+	KexAlgorithms +diffie-hellman-group-exchange-sha1
+	
+
