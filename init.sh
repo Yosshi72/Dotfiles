@@ -4,6 +4,18 @@
 CWD=$HOME/Dotfiles
 VSCODE=$HOME/Library/Application Support/Code/User
 
+#ssh-config
+echo ' Create the symbolic link for ssh-config: .ssh/conf.d/'
+if [ ! -e $HOME/.ssh/conf.d ]; then
+	mkdir $HOME/.ssh/conf.d
+	echo "Created directory: $HOME/.ssh/conf.d"
+	touch $HOME/.ssh/conf.d/elab $HOME/.ssh/conf.d/vsix $HOME/.ssh/conf.d/camp
+	echo "Created ssh-config files: camp, elab, vsix"
+fi
+ln -sf $HOME/Dotfiles/ssh-config/elab $HOME/.ssh/conf.d/elab
+ln -sf $HOME/Dotfiles/ssh-config/camp $HOME/.ssh/conf.d/camp
+ln -sf $HOME/Dotfiles/ssh-config/vsix $HOME/.ssh/conf.d/vsix
+
 #vim
 echo 'Create the symbolic link for vim: .vimrc'
 ln -sf $CWD/nvim/init.vim $HOME/.vimrc
