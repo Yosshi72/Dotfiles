@@ -1,0 +1,25 @@
+Host rt1
+	Hostname 172.16.100.10
+	User yossy
+	ProxyJump desk
+	ServerAliveInterval 15
+	ServerAliveCountMax 10
+Host rt2 
+	Hostname 172.16.100.20
+	User yossy
+	ProxyJump desk
+	ServerAliveInterval 15
+	ServerAliveCountMax 10
+Host rt3
+	Hostname 172.16.100.30
+	User yossy
+	ProxyJump desk
+	ServerAliveInterval 15
+	ServerAliveCountMax 10
+Host rt4
+	Hostname 172.16.100.40
+	User yossy
+	ProxyJump desk
+	ServerAliveInterval 15
+	ServerAliveCountMax 10
+

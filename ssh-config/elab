@@ -32,10 +32,13 @@ Host cc
   Hostname 203.178.135.69
 Host elab-gw
   Hostname elab-gw.ic.i.u-tokyo.ac.jp
-Host desk-vm
+Host desk
 	Hostname 172.16.100.101
 	User yossy
 	ProxyJump vm
+	ServerAliveInterval 15
+	ServerAliveCountMax 10
+	ForwardAgent yes
 Host ggw
   Hostname ggw.hongo.wide.ad.jp
 Host git
