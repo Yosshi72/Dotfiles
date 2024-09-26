@@ -3,31 +3,20 @@ set ruler
 set title
 set showmatch
 set autoindent 
+set mouse=a
 set nobackup
 set noswapfile
 set tabstop=2
 set shiftwidth=2
 set belloff=all
 set wildmenu
-set clipboard&
-set clipboard^=unnamedplus
+set clipboard_=unnamed
 set hls
+set cursorline
 if &compatible
  set nocompatible
 endif
-set runtimepath+=~/.cache/dein/repos/github.com/Shougo/dein.vim
-if dein#load_state('~/.cache/dein')
-  call dein#begin('~/.cache/dein')
-  call dein#load_toml('~/.config/dein/dein.toml', {'lazy': 0})
-  call dein#load_toml('~/.config/dein/dein_lazy.toml', {'lazy': 1})
-  call dein#load_toml('~/.config/dein/dein_lang.toml', {'lazy': 1})
-  call dein#end()
-  call dein#save_state()
-endif
 filetype plugin indent on
-if dein#check_install()
-	call dein#install()
-endif
 syntax enable
 
 nnoremap <C-h> <Left>
@@ -39,3 +28,8 @@ inoremap <C-l> <Right>
 nnoremap <C-k> <Up>
 inoremap <C-k> <Up>
 inoremap  <silent> jj <ESC>
+
+nnoremap j gj
+nnoremap k gk
+nnoremap <down> gj
+nnoremap <up> gk
