@@ -70,3 +70,7 @@ echo 'Create the symbolic link for vscode settings'
 ln -sf $CWD/Vscode/keybindings.json $VSCODE/keybindings.json
 ln -sf $CWD/Vscode/settings.json $VSCODE/settings.json
 ln -sf $CWD/Vscode/snippets/ $VSCODE/snippets
+
+#tmux
+echo 'Create the symbolic link for tmux settings'
+ln -sF $CWD/.tmux.conf $HOME/.tmux.conf
